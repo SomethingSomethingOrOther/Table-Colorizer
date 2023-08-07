@@ -23,9 +23,18 @@ function App() {
   return (
     <div className="App">
       <h1>Table Colorizer</h1>
+      <div>
+        <label>
+          Write a number (1-9):
+        <input type="text" value={inputValue} onChange={(e)=>setInputValue(e.target.value)}/>
+        </label>
+
+      </div>
+
+     <div> 
       <button onClick={handleChange}>Color me</button>
       <button onClick={handleReset}>Reset me</button>
-        <input type="text" value={inputValue} onChange={(e)=>setInputValue(e.target.value)}/>
+      </div>
         <div className="container">
           <div className="numbers" style={{backgroundColor: bool ? (Number(inputValue) === 1 ?  "orange":""):""}}>1</div>
           <div className="numbers" style={{backgroundColor: bool ? (Number(inputValue) === 2 ? "orange":""):""}}>2</div>
